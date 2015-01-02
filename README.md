@@ -2,23 +2,23 @@
 
 This is the official android sdk for [OAuth.io](https://oauth.io) !
 
-The OAuth.io android sdk allows you to use OAuth for your android application, and connect any OAuth provider [available on OAuth.io](https://oauth.io/providers).
+The OAuth.io android sdk allows you to use OAuth in android applications, as well as connect any OAuth provider [available on OAuth.io](https://oauth.io/providers): Twitter, Fitbit, etc.
 
 
 
 ## OAuth.io Requirements and Set-Up
 
-To use this sdk you will need to make sure you've registered your OAuth.io app and have a public key (https://oauth.io/docs).
+This SDK requires a registered OAuth.io app. Get the public key for this app from the Oauth web site (https://oauth.io/docs).
 
 
     
 ### Installation
 
-First you need to create an android project in eclipse for example
-To install the sdk android just download oauth.jar and put it in your libs directory
-Then refresh the libs directory in eclipse, right click on the oauth.jar and add it in your build path
+1. Create an android project. These instructions are for Eclipse.
+2. To install the android SDK, download oauth.jar and place in the project's "libs" directory. (For other IDE's, make sure the *.jar is linked as a library.)
+3. Then refresh the libs directory in eclipse, right click on the oauth.jar and add it in your build path (This step is not necessary in some IDEs, such as IntelliJ).
 
-You MUST add the line in your _AndroidManifest.xml_ in the manifest tag:
+4. In the AndroidManifest.xml, make sure you have this permission:
     
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -45,13 +45,13 @@ oauth.popup('facebook', options, callback);
 
 The callback is a class that implement the `OAuthCallback` method.
 
-The `OAuthCallback` interface implement just one method :
+The `OAuthCallback` interface implements a single method :
 
  ```java
 void onFinished(OAuthData data);
  ```
   
-The OAuthData class contain all the OAuth information :
+The OAuthData class has the following attributes :
 
  ```java
     public String provider;     // name of the provider
