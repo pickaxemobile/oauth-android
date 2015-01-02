@@ -18,7 +18,8 @@ This SDK requires a registered OAuth.io app. Go to the [site](https://oauth.io),
 2. Then refresh the libs directory in eclipse, right click on the oauth.jar and add it in your build path (This step is not necessary in some IDEs, such as IntelliJ).
 
 3. In the AndroidManifest.xml, make sure you have this permission:
-    <uses-permission android:name="android.permission.INTERNET" />
+
+    &lt;uses-permission android:name="android.permission.INTERNET" /&gt;
 
 
 ### Login User
